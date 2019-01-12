@@ -5,6 +5,7 @@ class Ability
     #user ||= User.new
     can :read, Article
     can :read, Comment
+    can :read, Picture
     #if user.new_record? #we are not logged in
     can :create, Comment
 
@@ -15,9 +16,11 @@ class Ability
     elsif user.role == 'editor'
       can :manage, Article
       can :manage, Comment
+      can :manage, Picture
     elsif user.role == 'user'
       can :manage, Article, user_id: user.id
       can :manage, Comment, article: { user_id: user.id }
+      can :manage, Picture, article: { user_id: user.id }
     end
     # Define abilities for the passed in user here. For example:
     #
