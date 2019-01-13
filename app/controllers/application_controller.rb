@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
     respond_to do |format|
       format.html do
         flash[:error] = t('application_controller:access_denied', default: 'Brak uprawnień!')
-        redirect to root_path
+        redirect_to root_path
       end
       format.json { head :forbidden }
     end
