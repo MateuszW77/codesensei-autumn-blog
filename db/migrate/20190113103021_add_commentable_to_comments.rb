@@ -6,7 +6,7 @@ class AddCommentableToComments < ActiveRecord::Migration[5.2]
 
     # Od teraz article_id niech nazywa się commentable_id
     rename_column :comments, :article_id, :commentable_id
-    
+
     add_column :comments, :commentable_type, :string, null: false, default: 'Article'
 
     add_index :comments, [:commentable_type, :commentable_id]
