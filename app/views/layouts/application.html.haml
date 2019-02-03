@@ -9,23 +9,8 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     = render 'layouts/nav'
-    /
-      <div class"navigation">
-      <haml_silent>        if user_signed_in?
-      </haml_silent><haml_block>         Witaj, <haml_loud> current_user.email </haml_loud>
-      <haml_loud> link_to &#39;Wyloguj&#39;, destroy_user_session_path, method: :delete </haml_loud>
-      </haml_block><haml_silent>        else
-      </haml_silent><haml_block>         Witaj!
-      <haml_loud> link_to &#39;Zaloguj się&#39;, new_user_session_path </haml_loud>
-      </haml_block>     </div>
+
     .container
       = render 'layouts/flash'
-      /
-        <div class="flash">
-        <haml_silent>         flash.each do |k, v|
-        </haml_silent><haml_block>          <div class="alert alert-<haml_loud> bootstrap_flash_color(k) </haml_loud>">
-        <strong><haml_loud> t &quot;flash.\#{k}&quot; </haml_loud>: </strong>
-        <haml_loud> v </haml_loud>
-        </div>
-        </haml_block>      </div>
+
       = yield
