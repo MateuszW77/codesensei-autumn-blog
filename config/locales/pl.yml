@@ -1,4 +1,10 @@
 pl:
+  main:
+    beer_type:
+      added_new: Dodaj nowy rodzaj piwa!
+      not_added_new: Błąd! Nie dodano nowego rodzaju!
+      update: Aktualizacja powiodła się!
+      update: Problem z aktualizacją!    
   flash:
     success: Sukces
     notice: Informacja
@@ -22,6 +28,7 @@ pl:
       edit_link: Edytuj
       delete_link: Usuń
       delete_confirm: Czy na pewno usunąć?
+
   activerecord:
     errors:
       models:
