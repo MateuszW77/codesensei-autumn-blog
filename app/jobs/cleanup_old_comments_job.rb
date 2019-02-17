@@ -3,6 +3,6 @@ class CleanupOldCommentsJob < ApplicationJob
 
   def perform(*args)
     destroyed = Comment.where('created_at = ?', 2.weeks.ago).destroy_all
-    logger.info "Deleted #{destroyed.size} comments created before #{2.weekd.ago}"
+    logger.info "Deleted #{destroyed.size} comments created before #{2.weeks.ago}"
   end
 end
