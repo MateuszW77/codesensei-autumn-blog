@@ -4,7 +4,7 @@ class UserTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
-  should validate_inlusion_of(:role) \
+  should validate_inclusion_of(:role) \
     .in_array(['user', 'admin', 'editor'])
 
   # Powyższe zastępuje
